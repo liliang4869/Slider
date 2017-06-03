@@ -15,6 +15,19 @@ export default class Test extends Component {
      <Slider onDrag={(e)=>{console.log('onDrag',e)}}
         endDrag={(e)=>{console.log('endDrag',e)}}
         thumbStyle={{height:20,width:20,backgroundColor:'green'}}/>
+         <Slider onDrag={(e)=>{console.log('onDrag',e)}}
+        endDrag={(e)=>{console.log('endDrag',e)}}
+        thumbStyle={{height:15,width:15,borderRadius:2,backgroundColor:'red'}}
+        trackBarRightColor='blue'/>
+         <Slider onDrag={(e)=>{console.log('onDrag',e)}}
+        endDrag={(e)=>{console.log('endDrag',e)}}
+        thumbStyle={{height:30,width:30,backgroundColor:'green'}}
+        trackBarStyle={{height:20}}
+        trackBarBackgroundColor='#852133'/>
+         <Slider onDrag={(e)=>{console.log('onDrag',e)}}
+        endDrag={(e)=>{console.log('endDrag',e)}}
+        thumbStyle={{height:20,width:20,backgroundColor:'green'}}
+        style={{backgroundColor:'#741258',height:60}}/>
       </View>
     );
   }
