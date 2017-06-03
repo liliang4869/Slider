@@ -24,14 +24,14 @@ const proptypes = {
 export default class Slider extends Component {
     constructor(props) {
         super(props);
-        let defaultLocation = this.props.defaultLocation == undefined ? 0 : this.props.defaultLocation > 1 ? 1 : this.props.defaultLocation < 0 ? 0 : this.props.defaultLocation;
-        console.log(defaultLocation)
+        this.defaultLocation = this.props.defaultLocation == undefined ? 0 : this.props.defaultLocation > 1 ? 1 : this.props.defaultLocation < 0 ? 0 : this.props.defaultLocation;
         this.state = {
-            leftLength: defaultLocation
+            leftLength: this.defaultLocation
         }
         this.layout = { x: 0, y: 0, height: 0, width: 0 };
         this.trackBarlayout = { x: 0, y: 0, height: 0, width: 0 };
         this.trackBarLength = 0;
+        
     }
     componentWillMount() {
         this.panResponder = PanResponder.create({
@@ -79,6 +79,12 @@ export default class Slider extends Component {
                 }
             },
         })
+    }
+    componentWillReceiveProps(props){
+        let lct= props.defaultLocation == undefined ? 0 : props.defaultLocation > 1 ? 1 : props.defaultLocation < 0 ? 0 : props.defaultLocation;
+        if(lct !==this.defaultLocation){
+            this.setState({leftLength:lct})
+        }
     }
     render() {
         return (
