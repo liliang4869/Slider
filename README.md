@@ -5,4 +5,4 @@
 
 ------20170603更新</br>
 已支持点击滑动</br>
-<a href="https://github.com/liliang4869/Slider/blob/master/example.PNG"><img src="https://github.com/liliang4869/Slider/blob/master/example.PNG" width="1080"></a>
+<a href="https://github.com/liliang4869/Slider/blob/master/example.png"><img src="https://github.com/liliang4869/Slider/blob/master/example.png" width="1080"></a>
