@@ -75,7 +75,7 @@ export default class Slider extends Component {
                 if (currentx <= this.trackBarlayout.x + this.trackBarLength && currentx >= this.trackBarlayout.x) {
                     let l = (evt.nativeEvent.pageX - this.trackBarlayout.x) / this.trackBarLength;
                     this.setState({ leftLength: l });
-                    this.props.endDrag(this.state.leftLength);
+                    this.props.endDrag(l);
                 }
             },
         })
